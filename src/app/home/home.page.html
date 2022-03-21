@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            List Mock api Items
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size="12">
+
+                List
+
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+    <div>
+
+        <ion-list>
+            <ion-item style="display: flex;justify-content: space-between; flex-direction: column;" *ngFor="let item of fakeList">
+                <div>
+                    <div>
+                        <ion-label>{{item.name}}</ion-label>
+                    </div>
+                    <div>
+                        <p>{{item.description}}</p>
+                    </div>
+                    <div>
+                        <p>{{item.price}}</p>
+                    </div>
+                </div>
+
+
+
+            </ion-item>
+        </ion-list>
+
+    </div>
+
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size="12">
+
+                <ion-button (click)="onClickAdd()" expand="block" fill="clear" shape="round">
+                    Add one
+                </ion-button>
+
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
